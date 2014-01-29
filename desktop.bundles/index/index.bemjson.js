@@ -15,9 +15,25 @@
             ]
         },
         {
-            block: 'content',
+            block: 'menu',
+            js: true,
             content: [
-                'main content'
+                {
+                    elem: 'item',
+                    content: 'First point'
+                },
+                {
+                    elem: 'item',
+                    content: 'Second point'
+                },
+                {
+                    elem: 'item',
+                    content: 'Third point'
+                },
+                {
+                    elem: 'item',
+                    content: 'Fourth point'
+                }
             ]
         },
         {
