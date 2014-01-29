@@ -15,24 +15,73 @@
             ]
         },
         {
-            block: 'menu',
+            block: 'menu-vert',
             js: true,
             content: [
                 {
                     elem: 'item',
-                    content: 'First point'
+                    content: {
+                        block: 'link',
+                        mix: [{ block: 'menu-vert', elem: 'item-selector'}],
+                        url: '/',
+                        content: 'First point'
+                    }
                 },
                 {
                     elem: 'item',
-                    content: 'Second point'
+                    content: {
+                            block: 'link',
+                            mix: [{ block: 'menu-vert', elem: 'item-selector'}],
+                            url: '/',
+                            content: 'Second point'
+                        },
+                    'item-content': {
+                        elem: 'item-content',
+                        elemMods: { 'visibility' : 'visible' },
+                        content:
+                            {
+                                elem: 'submenu',
+                                content: [
+                                    {
+                                        elem: 'item',
+                                        content: {
+                                            block: 'link',
+                                            mix: [{ block: 'menu-vert', elem: 'item-selector'}],
+                                            url: '/',
+                                            content: 'First submenu point'
+                                        }
+                                    },
+                                    {
+                                        elem: 'item',
+                                        content: {
+                                            block: 'link',
+                                            mix: [{ block: 'menu-vert', elem: 'item-selector'}],
+                                            url: '/',
+                                            content: 'Second submenu point'
+                                        }
+                                    }
+                                ]
+                            }
+                    }
                 },
                 {
                     elem: 'item',
-                    content: 'Third point'
+                    content: {
+                        block: 'link',
+                        mods : { 'pseudo' : 'yes'},
+                        mix: [{ block: 'menu-vert', elem: 'item-selector'}],
+                        url: '/',
+                        content: 'Third point'
+                    }
                 },
                 {
                     elem: 'item',
-                    content: 'Fourth point'
+                    content: {
+                        block: 'link',
+                        mix: [{ block: 'menu-vert', elem: 'item-selector'}],
+                        url: '/',
+                        content: 'Fourth point'
+                    }
                 }
             ]
         },
