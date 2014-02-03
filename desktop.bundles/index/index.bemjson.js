@@ -54,6 +54,105 @@
                             regDate: '19-mar-12 12:00',
                             lastLogin: '16-aug-12 21:11',
                             lastComment: '16-aug-12 16:10'
+                        },
+                        {
+                            id: 2,
+                            name: 'Bart Pineapple',
+                            upic: '../../data/upics/25x25/2.jpg',
+                            comments: 37,
+                            topics: null,
+                            userGroup: 'Registered user',
+                            regDate: '19-mar-11 13:57',
+                            lastLogin: '15-may-12 17:34',
+                            lastComment: '14-may-12 20:01'
+                        },
+                        {
+                            id: 3,
+                            name: 'Caitlyn Appleseed',
+                            upic: '../../data/upics/25x25/3.jpg',
+                            comments: 37,
+                            topics: null,
+                            userGroup: 'Registered user',
+                            regDate: '19-mar-11 13:57',
+                            lastLogin: '15-may-12 17:34',
+                            lastComment: '14-may-12 20:01'
+                        },
+                        {
+                            id: 4,
+                            name: 'Carmen Candy',
+                            upic: '../../data/upics/25x25/4.jpg',
+                            comments: 37,
+                            topics: null,
+                            userGroup: 'Registered user',
+                            regDate: '19-mar-11 13:57',
+                            lastLogin: '15-may-12 17:34',
+                            lastComment: '14-may-12 20:01'
+                        },
+                        {
+                            id: 5,
+                            name: 'Dolf Dreamer',
+                            upic: '../../data/upics/25x25/5.jpg',
+                            comments: 37,
+                            topics: null,
+                            userGroup: 'Registered user',
+                            regDate: '19-mar-11 13:57',
+                            lastLogin: '15-may-12 17:34',
+                            lastComment: '14-may-12 20:01'
+                        },
+                        {
+                            id: 6,
+                            name: 'Edgar Enders',
+                            upic: '../../data/upics/25x25/6.jpg',
+                            comments: 37,
+                            topics: null,
+                            userGroup: 'Registered user',
+                            regDate: '19-mar-11 13:57',
+                            lastLogin: '15-may-12 17:34',
+                            lastComment: '14-may-12 20:01'
+                        },
+                        {
+                            id: 7,
+                            name: 'Jane Blackswan',
+                            upic: '../../data/upics/25x25/7.jpg',
+                            comments: 37,
+                            topics: null,
+                            userGroup: 'Registered user',
+                            regDate: '19-mar-11 13:57',
+                            lastLogin: '15-may-12 17:34',
+                            lastComment: '14-may-12 20:01'
+                        },
+                        {
+                            id: 8,
+                            name: 'Jennifer Appleseed',
+                            upic: '../../data/upics/25x25/8.jpg',
+                            comments: 37,
+                            topics: null,
+                            userGroup: 'Registered user',
+                            regDate: '19-mar-11 13:57',
+                            lastLogin: '15-may-12 17:34',
+                            lastComment: '14-may-12 20:01'
+                        },
+                        {
+                            id: 9,
+                            name: 'John Doe',
+                            upic: '../../data/upics/25x25/9.jpg',
+                            comments: 37,
+                            topics: null,
+                            userGroup: 'Registered user',
+                            regDate: '19-mar-11 13:57',
+                            lastLogin: '15-may-12 17:34',
+                            lastComment: '14-may-12 20:01'
+                        },
+                        {
+                            id: 10,
+                            name: 'John Foe',
+                            upic: '../../data/upics/25x25/10.jpg',
+                            comments: 37,
+                            topics: null,
+                            userGroup: 'Registered user',
+                            regDate: '19-mar-11 13:57',
+                            lastLogin: '15-may-12 17:34',
+                            lastComment: '14-may-12 20:01'
                         }
                     ]
                 }
