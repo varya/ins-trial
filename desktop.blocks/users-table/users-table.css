@@ -40,3 +40,15 @@
 {
     font-weight: bold;
 }
+
+.users-table__tr
+{
+    line-height: 3em;
+    border: #ccc solid;
+    border-width: 0 1px 1px;
+    background: #fff;
+}
+.users-table__tr:nth-child(even)
+{
+    background: #fafafa;
+}
