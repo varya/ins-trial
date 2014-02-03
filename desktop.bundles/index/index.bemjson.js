@@ -47,7 +47,7 @@
                         {
                             id: 1,
                             name: 'Amber H',
-                            upic: 'data/upics/25x25/1.jpg',
+                            upic: '../../data/upics/25x25/1.jpg',
                             comments: 64,
                             topics: 9,
                             userGroup: 'Registered user',
