@@ -19,12 +19,20 @@ block 'users-table' {
         tag: 'thead'
 
         content: {
-            var result = []; // TODO: add checkbox here
+            var result = [];
             this.ctx.data.forEach(function(item){
                 var data = {
                     elem: 'th',
                     content: item.title
                 };
+                if (item.id === 'name') {
+                    data.content = [
+                        {
+                            block: 'checkbox'
+                        },
+                        item.title
+                    ]
+                }
                 if (item.id === 'name') {
                     data.mods = {
                         left: true
@@ -61,6 +69,9 @@ block 'users-table' {
                         data.content = user[item.id]
                     } else {
                         data.content = [
+                            {
+                                block: 'checkbox'
+                            },
                             {
                                 block: 'upic',
                                 url: user.upic

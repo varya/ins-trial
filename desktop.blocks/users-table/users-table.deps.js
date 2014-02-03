@@ -1,5 +1,6 @@
 ({
     shouldDeps: [
-        { block: 'upic' }
+        { block: 'upic' },
+        { block: 'checkbox' }
     ]
 })
