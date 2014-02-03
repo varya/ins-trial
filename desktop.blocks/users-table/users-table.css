@@ -1,0 +1,23 @@
+/* Reset */
+.users-table
+{
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.users-table__head
+{
+    text-align: left;
+}
+
+.users-table__th
+{
+    font-weight: normal;
+}
+
+/* Block styles */
+
+.users-table
+{
+    width: 100%;
+}
