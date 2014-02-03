@@ -6,6 +6,11 @@ block 'users-table' {
         {
             elem: 'head',
             data: this.ctx.head
+        },
+        {
+            elem: 'body',
+            head: this.ctx.head,
+            users: this.ctx.users
         }
     ]
 
@@ -18,7 +23,7 @@ block 'users-table' {
             this.ctx.data.forEach(function(item){
                 result.push({
                     elem: 'th',
-                    content: item
+                    content: item.title
                 });
             });
             return {
@@ -30,7 +35,32 @@ block 'users-table' {
     }
 
     elem 'th', tag: 'th'
-
     elem 'tr', tag: 'tr'
+    elem 'td', tag: 'td'
+
+    elem 'body' {
+
+        tag: 'tbody'
+
+        content: {
+            var result = [],
+                head = this.ctx.head;
+            this.ctx.users.forEach(function(user){
+                var userData = [];
+                head.forEach(function(item){
+                    userData.push({
+                        elem: 'td',
+                        content: user[item.id]
+                    })
+                });
+                result.push({
+                    elem: 'tr',
+                    content: userData
+                })
+            });
+            return result;
+        }
+
+    }
 
 }
