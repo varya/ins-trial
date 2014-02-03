@@ -1,0 +1,6 @@
+block 'upic' {
+    tag: 'img'
+    attrs: {
+        src: this.ctx.url
+    }
+}

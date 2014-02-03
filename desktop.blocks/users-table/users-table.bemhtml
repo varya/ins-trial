@@ -48,10 +48,21 @@ block 'users-table' {
             this.ctx.users.forEach(function(user){
                 var userData = [];
                 head.forEach(function(item){
-                    userData.push({
-                        elem: 'td',
-                        content: user[item.id]
-                    })
+                    var data = {
+                        elem: 'td'
+                    }
+                    if (item.id !== 'name') {
+                        data.content = user[item.id]
+                    } else {
+                        data.content = [
+                            {
+                                block: 'upic',
+                                url: user.upic
+                            },
+                            user[item.id]
+                        ]
+                    }
+                    userData.push(data)
                 });
                 result.push({
                     elem: 'tr',
