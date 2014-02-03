@@ -1,0 +1,36 @@
+block 'users-table' {
+
+    tag: 'table'
+
+    content: [
+        {
+            elem: 'head',
+            data: this.ctx.head
+        }
+    ]
+
+    elem 'head' {
+
+        tag: 'thead'
+
+        content: {
+            var result = []; // TODO: add checkbox here
+            this.ctx.data.forEach(function(item){
+                result.push({
+                    elem: 'th',
+                    content: item
+                });
+            });
+            return {
+                elem: 'tr',
+                content: result
+            };
+        }
+
+    }
+
+    elem 'th', tag: 'th'
+
+    elem 'tr', tag: 'tr'
+
+}

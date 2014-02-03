@@ -9,7 +9,22 @@
     ],
     content:[
         {
-            block: 'layout'
+            block: 'layout',
+            content: [
+                {
+                    block: 'users-table',
+                    head: [
+                        'Username',
+                        'Comments',
+                        'Topics',
+                        'Usergroup',
+                        'Registratin date',
+                        'Last login',
+                        'Last comment'
+                    ]
+
+                }
+            ]
         },
         { elem: 'js', url: '_index.js' }
     ]
