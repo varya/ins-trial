@@ -83,7 +83,7 @@
                             upic: '../../data/upics/25x25/4.jpg',
                             comments: 37,
                             topics: null,
-                            userGroup: 'Registered user',
+                            userGroup: 'Moderator',
                             regDate: '19-mar-11 13:57',
                             lastLogin: '15-may-12 17:34',
                             lastComment: '14-may-12 20:01'
@@ -94,7 +94,7 @@
                             upic: '../../data/upics/25x25/5.jpg',
                             comments: 37,
                             topics: null,
-                            userGroup: 'Registered user',
+                            userGroup: 'Super user',
                             regDate: '19-mar-11 13:57',
                             lastLogin: '15-may-12 17:34',
                             lastComment: '14-may-12 20:01'
@@ -138,7 +138,7 @@
                             upic: '../../data/upics/25x25/9.jpg',
                             comments: 37,
                             topics: null,
-                            userGroup: 'Registered user',
+                            userGroup: 'Moderator',
                             regDate: '19-mar-11 13:57',
                             lastLogin: '15-may-12 17:34',
                             lastComment: '14-may-12 20:01'

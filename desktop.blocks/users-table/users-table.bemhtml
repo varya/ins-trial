@@ -21,10 +21,16 @@ block 'users-table' {
         content: {
             var result = []; // TODO: add checkbox here
             this.ctx.data.forEach(function(item){
-                result.push({
+                var data = {
                     elem: 'th',
                     content: item.title
-                });
+                };
+                if (item.id === 'name') {
+                    data.mods = {
+                        left: true
+                    }
+                }
+                result.push(data);
             });
             return {
                 elem: 'tr',
@@ -61,6 +67,16 @@ block 'users-table' {
                             },
                             user[item.id]
                         ]
+                    }
+                    if (item.id === 'userGroup') {
+                        data.mods = {
+                            right: true
+                        }
+                    }
+                    if (item.id === 'name') {
+                        data.mods = {
+                            left: true
+                        }
                     }
                     userData.push(data)
                 });

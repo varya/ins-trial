@@ -32,23 +32,44 @@
     background-image: -ms-linear-gradient(top, #fff 10%, #f9f9f9 50%, #f4f4f4 100%);
     background-image: -o-linear-gradient(top, #fff 10%, #f9f9f9 50%, #f4f4f4 100%);
     background-image: linear-gradient(to bottom, #fff 10%, #f9f9f9 50%, #f4f4f4 100%);
-
-    line-height: 3em;
 }
 
 .users-table__th
 {
     font-weight: bold;
+    text-align: center;
+    padding: 1em;
+}
+
+.users-table__th_left
+{
+    text-align: left;
 }
 
 .users-table__tr
 {
-    line-height: 3em;
-    border: #ccc solid;
-    border-width: 0 1px 1px;
     background: #fff;
 }
+
 .users-table__tr:nth-child(even)
 {
     background: #fafafa;
+}
+
+.users-table__td
+{
+    padding: 1em;
+    border: #ccc solid;
+    border-width: 0 1px 1px;
+    text-align: center;
+}
+
+.users-table__td_left
+{
+    text-align: left;
+}
+
+.users-table__td_right
+{
+    text-align: right;
 }
