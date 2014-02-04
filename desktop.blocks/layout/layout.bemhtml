@@ -1,0 +1,6 @@
+block 'layout', elem 'main' {
+    content: {
+        elem: 'main-i',
+        content: this.ctx.content
+    }
+}
