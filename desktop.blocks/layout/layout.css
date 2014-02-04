@@ -1,0 +1,39 @@
+.layout__header
+{
+    background: #000;
+    height: 50px;
+}
+
+.layout__row
+{
+    background: green;
+}
+
+.layout__main-wrap
+{
+    width: 100%;
+    background: #f8f8f8;
+    float: right;
+    margin-left: -200px;
+}
+
+.layout__main
+{
+    background: #fff;
+    margin-left: 200px;
+}
+
+.layout__main-i
+{
+    max-width: 990px;
+    padding-top: 2em;
+    padding-left: 4em;
+    padding-bottom: 2em;
+    box-sizing: border-box;
+}
+
+.layout__sidebar
+{
+    float: left;
+    width: 200px;
+}

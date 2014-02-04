@@ -1,4 +1,6 @@
 .page
 {
     font: 12px/1em Helvetica;
+    padding: 0;
+    margin: 0;
 }
