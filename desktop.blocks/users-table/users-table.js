@@ -2,18 +2,16 @@ modules.define('i-bem__dom', function(provide, DOM) {
 
 DOM.decl('users-table', {
 
-    onSetMod: {
-        'js' : {
-            'inited' : function() {
-                console.log('inited');
-            }
-        }
+    toggleRow: function() {
+        console.log('Toggle Row');
     }
 
 }, {
 
     live : function() {
-        this.liveInitOnEvent('click');
+        this.liveInitOnBlockInsideEvent('change', 'checkbox', function() {
+            this.toggleRow();
+        });
     }
 
 });
