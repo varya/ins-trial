@@ -46,18 +46,18 @@
     text-align: left;
 }
 
-.users-table__tr
+.users-table__row
 {
     background: #fff;
 }
 
-.users-table__tr:nth-child(even)
+.users-table__row:nth-child(even)
 {
     background: #fafafa;
 }
 
-.users-table__tr_current,
-.users-table__tr_current:nth-child(even)
+.users-table__row_current,
+.users-table__row_current:nth-child(even)
 {
     background: #ebf8fe;
 }

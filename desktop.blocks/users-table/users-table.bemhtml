@@ -43,7 +43,7 @@ block 'users-table' {
                 result.push(data);
             });
             return {
-                elem: 'tr',
+                elem: 'head-row',
                 content: result
             };
         }
@@ -51,7 +51,8 @@ block 'users-table' {
     }
 
     elem 'th', tag: 'th'
-    elem 'tr', tag: 'tr'
+    elem 'head-row', tag: 'tr'
+    elem 'row', tag: 'tr'
     elem 'td', tag: 'td'
 
     elem 'body' {
@@ -94,7 +95,7 @@ block 'users-table' {
                     userData.push(data)
                 });
                 result.push({
-                    elem: 'tr',
+                    elem: 'row',
                     content: userData
                 })
             });
