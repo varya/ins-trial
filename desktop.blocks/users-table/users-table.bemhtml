@@ -30,7 +30,8 @@ block 'users-table' {
                 if (item.id === 'name') {
                     data.content = [
                         {
-                            block: 'checkbox'
+                            block: 'checkbox',
+                            mix: [{ block: 'users-table', elem: 'checkbox' }]
                         },
                         item.title
                     ]
@@ -73,7 +74,8 @@ block 'users-table' {
                     } else {
                         data.content = [
                             {
-                                block: 'checkbox'
+                                block: 'checkbox',
+                                mix: [{ block: 'users-table', elem: 'checkbox' }]
                             },
                             {
                                 block: 'upic',

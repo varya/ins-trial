@@ -80,7 +80,7 @@
     text-align: right;
 }
 
-.users-table .checkbox
+.users-table__checkbox
 {
     padding-right: 0.5em;
 }
