@@ -1,0 +1,13 @@
+.window-icon
+{
+    width: 13px;
+    height: 1em;
+    display: inline-block;
+    background-image:url(window-icon.gif);
+    background-repeat: no-repeat;
+    background-position: 0 50%;
+    line-height: 1em;
+    margin: auto 0;
+    vertical-align: middle;
+    float: right;
+}
