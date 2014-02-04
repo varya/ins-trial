@@ -2,6 +2,7 @@
     shouldDeps: [
         { block: 'upic' },
         { block: 'checkbox' },
-        { block: 'link' }
+        { block: 'link' },
+        { block: 'window-icon' }
     ]
 })

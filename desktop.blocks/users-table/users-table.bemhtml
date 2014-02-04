@@ -86,6 +86,15 @@ block 'users-table' {
                                 url: '#',
                                 mix: [{ block: 'users-table', elem: 'username' }],
                                 content: user[item.id]
+                            },
+                            {
+                                block: 'window-icon',
+                                elem: 'wrap',
+                                content: {
+                                    block: 'link',
+                                    url: '#',
+                                    mix: [{ block: 'window-icon'},{ block: 'users-table', elem: 'window-icon'}]
+                                }
                             }
                         ]
                     }
