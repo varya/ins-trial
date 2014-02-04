@@ -2,6 +2,8 @@ block 'users-table' {
 
     tag: 'table'
 
+    js: true
+
     content: [
         {
             elem: 'head',
