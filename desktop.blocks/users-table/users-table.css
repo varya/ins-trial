@@ -56,6 +56,12 @@
     background: #fafafa;
 }
 
+.users-table__tr_current,
+.users-table__tr_current:nth-child(even)
+{
+    background: #ebf8fe;
+}
+
 .users-table__td
 {
     padding: 1em 0.5em;
