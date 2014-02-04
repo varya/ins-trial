@@ -1,0 +1,120 @@
+block 'users-table' {
+
+    tag: 'table'
+
+    js: true
+
+    content: [
+        {
+            elem: 'head',
+            data: this.ctx.head
+        },
+        {
+            elem: 'body',
+            head: this.ctx.head,
+            users: this.ctx.users
+        }
+    ]
+
+    elem 'head' {
+
+        tag: 'thead'
+
+        content: {
+            var result = [];
+            this.ctx.data.forEach(function(item){
+                var data = {
+                    elem: 'th',
+                    content: item.title
+                };
+                if (item.id === 'name') {
+                    data.content = [
+                        {
+                            block: 'checkbox',
+                            mix: [{ block: 'users-table', elem: 'checkbox' }]
+                        },
+                        item.title
+                    ]
+                }
+                if (item.id === 'name') {
+                    data.mods = {
+                        left: true
+                    }
+                }
+                result.push(data);
+            });
+            return {
+                elem: 'head-row',
+                content: result
+            };
+        }
+
+    }
+
+    elem 'th', tag: 'th'
+    elem 'head-row', tag: 'tr'
+    elem 'row', tag: 'tr'
+    elem 'td', tag: 'td'
+
+    elem 'body' {
+
+        tag: 'tbody'
+
+        content: {
+            var result = [],
+                head = this.ctx.head;
+            this.ctx.users.forEach(function(user){
+                var userData = [];
+                head.forEach(function(item){
+                    var data = {
+                        elem: 'td'
+                    }
+                    if (item.id !== 'name') {
+                        data.content = user[item.id]
+                    } else {
+                        data.content = [
+                            {
+                                block: 'checkbox',
+                                mix: [{ block: 'users-table', elem: 'checkbox' }]
+                            },
+                            {
+                                block: 'upic',
+                                url: user.upic,
+                                mix: [{ block: 'users-table', elem: 'upic' }]
+                            },
+                            {
+                                block: 'link',
+                                url: '#',
+                                mix: [{ block: 'users-table', elem: 'username' }],
+                                content: user[item.id]
+                            },
+                            {
+                                block: 'link',
+                                url: '#',
+                                mix: [{ block: 'window-icon'},{ block: 'users-table', elem: 'window-icon'}]
+                            }
+                        ]
+                    }
+                    if (item.id === 'userGroup') {
+                        data.mods = {
+                            right: true
+                        }
+                    }
+                    if (item.id === 'name') {
+                        data.mods = {
+                            left: true
+                        }
+                    }
+                    userData.push(data)
+                });
+                result.push({
+                    elem: 'row',
+                    content: userData
+                })
+            });
+            return result;
+        }
+
+    }
+
+}

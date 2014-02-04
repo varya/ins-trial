@@ -1,0 +1,10 @@
+.window-icon
+{
+    width: 13px;
+    height: 25px;
+    display: inline-block;
+    background-image:url(window-icon.gif);
+    background-repeat: no-repeat;
+    background-position: 0 50%;
+    float: right;
+}
