@@ -79,7 +79,12 @@ block 'users-table' {
                                 block: 'upic',
                                 url: user.upic
                             },
-                            user[item.id]
+                            {
+                                block: 'link',
+                                url: '#',
+                                mix: [{ block: 'users-table', elem: 'username' }],
+                                content: user[item.id]
+                            }
                         ]
                     }
                     if (item.id === 'userGroup') {
