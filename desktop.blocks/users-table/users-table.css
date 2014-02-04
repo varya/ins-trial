@@ -83,6 +83,7 @@
 .users-table__checkbox
 {
     padding-right: 0.5em;
+    vertical-align: middle;
 }
 
 .users-table__username
@@ -90,9 +91,15 @@
     text-decoration: none;
     font-weight: bold;
     color: #000;
+    vertical-align: middle;
 }
 
 .users-table__window-icon
 {
-    position: relative;
+    vertical-align: middle;
+}
+
+.users-table__upic
+{
+    vertical-align: middle;
 }

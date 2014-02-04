@@ -79,7 +79,8 @@ block 'users-table' {
                             },
                             {
                                 block: 'upic',
-                                url: user.upic
+                                url: user.upic,
+                                mix: [{ block: 'users-table', elem: 'upic' }]
                             },
                             {
                                 block: 'link',
@@ -88,13 +89,9 @@ block 'users-table' {
                                 content: user[item.id]
                             },
                             {
-                                block: 'window-icon',
-                                elem: 'wrap',
-                                content: {
-                                    block: 'link',
-                                    url: '#',
-                                    mix: [{ block: 'window-icon'},{ block: 'users-table', elem: 'window-icon'}]
-                                }
+                                block: 'link',
+                                url: '#',
+                                mix: [{ block: 'window-icon'},{ block: 'users-table', elem: 'window-icon'}]
                             }
                         ]
                     }
