@@ -75,3 +75,13 @@
     }
 
 }
+
+@media screen and (max-width: 640px) {
+
+    .layout__main-i
+    {
+        padding-left: 1em;
+        padding-top: 1em;
+    }
+
+}
