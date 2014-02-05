@@ -25,7 +25,10 @@ block 'users-table' {
             this.ctx.data.forEach(function(item){
                 var data = {
                     elem: 'th',
-                    content: item.title
+                    content: {
+                        elem: 'th-i',
+                        content: item.title
+                    }
                 };
                 if (item.id === 'name') {
                     data.content = [
@@ -33,7 +36,10 @@ block 'users-table' {
                             block: 'checkbox',
                             mix: [{ block: 'users-table', elem: 'checkbox' }]
                         },
-                        item.title
+                        {
+                            elem: 'th-i',
+                            content: item.title
+                        }
                     ]
                 }
                 if (item.id === 'name') {
