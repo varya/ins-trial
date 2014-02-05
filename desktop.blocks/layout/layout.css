@@ -6,7 +6,7 @@
 
 .layout__row
 {
-    background: green;
+    background: #fff;
 }
 
 .layout__main-wrap
@@ -45,4 +45,33 @@
 {
     float: left;
     width: 200px;
+}
+
+@media screen and (max-width: 768px) {
+
+    .layout__main-wrap
+    {
+        float: none;
+        margin-left: 0;
+    }
+
+    .layout__main
+    {
+        margin-left: 0;
+        padding-right: 2em;
+    }
+
+    .layout__main-i
+    {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .layout__sidebar
+    {
+        float: none;
+        width: 100%;
+        background: #f8f8f8;
+    }
+
 }
