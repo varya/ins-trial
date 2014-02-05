@@ -6,7 +6,7 @@
 
 .layout__row
 {
-    background: green;
+    background: #fff;
 }
 
 .layout__main-wrap
@@ -32,8 +32,56 @@
     box-sizing: border-box;
 }
 
+@media screen and (max-width: 1024px) {
+
+    .layout__main-i
+    {
+        max-width: 810px;
+    }
+
+}
+
 .layout__sidebar
 {
     float: left;
     width: 200px;
+}
+
+@media screen and (max-width: 768px) {
+
+    .layout__main-wrap
+    {
+        float: none;
+        margin-left: 0;
+    }
+
+    .layout__main
+    {
+        margin-left: 0;
+        padding-right: 2em;
+    }
+
+    .layout__main-i
+    {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .layout__sidebar
+    {
+        float: none;
+        width: 100%;
+        background: #f8f8f8;
+    }
+
+}
+
+@media screen and (max-width: 640px) {
+
+    .layout__main-i
+    {
+        padding-left: 1em;
+        padding-top: 1em;
+    }
+
 }
