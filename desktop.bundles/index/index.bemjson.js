@@ -18,7 +18,8 @@
                     elem: 'row',
                     content: [
                         {
-                            elem: 'sidebar'
+                            elem: 'sidebar',
+                            content: 'Sidebar content'
                         },
                         {
                             elem: 'main-wrap',
