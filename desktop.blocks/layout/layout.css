@@ -32,6 +32,15 @@
     box-sizing: border-box;
 }
 
+@media screen and (max-width: 1024px) {
+
+    .layout__main-i
+    {
+        max-width: 810px;
+    }
+
+}
+
 .layout__sidebar
 {
     float: left;
