@@ -1,0 +1,40 @@
+block 'select' {
+
+    js: true
+
+    content: [
+        {
+            elem: 'button',
+            content: this.ctx.options[0].content
+        },
+        {
+            elem: 'list',
+            content: this.ctx.options
+        }
+    ]
+
+    elem 'button' {
+
+        content: [
+            {
+                elem: 'text',
+                content: this.ctx.content
+            },
+            {
+                elem: 'caret',
+                content: '▾'
+            }
+        ]
+
+    }
+
+    elem 'option' {
+
+        attrs: {
+            title: this.ctx.content,
+            'data-value': this.ctx.value
+        }
+
+    }
+
+}
