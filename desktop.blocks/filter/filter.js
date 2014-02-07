@@ -2,16 +2,6 @@ modules.define('i-bem__dom', ['jquery', 'BEMHTML'], function(provide, $, BEMHTML
 
 DOM.decl('filter', {
 
-    onSetMod: {
-        'js' : {
-            'inited' : function() {
-                DOM.blocks.button.on(this.elem('add'), 'click', function() {
-                    this._addRow();
-                }, this);
-            }
-        }
-    },
-
     _onSelect: function(e, data) {
         var select = e.target.domElem,
             row = select.closest(this.buildSelector('row')),
@@ -115,6 +105,17 @@ DOM.decl('filter', {
                 {
                     elem: 'td',
                     mix: [{ elem: 'val' }]
+                },
+                {
+                    elem: 'td',
+                    content: {
+                        block: 'button',
+                        mods: { action: 'remove' },
+                        text: 'remove'
+                    }
+                },
+                {
+                    elem: 'td'
                 }
             ]
         };
@@ -122,6 +123,10 @@ DOM.decl('filter', {
         if (currentRows.length < 2) { // TODO: change for more rows
             $(currentRows[0]).after(BEMHTML.apply(row));
         }
+    },
+    _removeRow: function(e) {
+        var row = e.target.domElem.closest(this.buildSelector('row'));
+        row.remove();
     }
 
 }, {
@@ -132,7 +137,14 @@ DOM.decl('filter', {
             this._onSelect(e, data);
         });
 
-        this.liveInitOnBlockInsideEvent('click', 'button');
+        this.liveInitOnBlockInsideEvent('click', 'button', function(e){
+            if (e.target.hasMod('action', 'add')) {
+                this._addRow();
+            }
+            if (e.target.hasMod('action', 'remove')) {
+                this._removeRow(e)
+            }
+        });
 
     }
 
