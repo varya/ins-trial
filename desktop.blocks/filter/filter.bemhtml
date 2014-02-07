@@ -25,8 +25,8 @@ block 'filter' {
                         },
                         {
                             elem: 'option',
-                            value: 'topics',
-                            content: 'Topics'
+                            value: 'usergroup',
+                            content: 'User Group'
                         }
                     ]
                 }

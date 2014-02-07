@@ -36,6 +36,29 @@ DOM.decl('filter', {
                 ]
             }
         }
+        if (data.value === "usergroup") {
+            newSelect = {
+                block: 'select',
+                name: 'val',
+                options: [
+                    {
+                        elem: 'option',
+                        value: '',
+                        content: '—'
+                    },
+                    {
+                        elem: 'option',
+                        value: 'moderators',
+                        content: 'Moderators'
+                    },
+                    {
+                        elem: 'option',
+                        value: 'user',
+                        content: 'Registered user'
+                    }
+                ]
+            }
+        }
 
         if (newSelect) {
             DOM.update(td, BEMHTML.apply(newSelect));
