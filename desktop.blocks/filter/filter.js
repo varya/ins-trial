@@ -62,6 +62,7 @@ DOM.decl('filter', {
 
         if (data.value === "") {
             DOM.update(td, "");
+            this.setMod(this.elem('add'), 'invisible', true); // for 1 row only!!!
         }
 
         if (newSelect) {
