@@ -8,7 +8,7 @@ DOM.decl('filter', {
             td = row.find(this.buildSelector('val')),
             newSelect;
 
-        if (data.value === "comments") {
+        if (data.value === "comments" || data.value === "topics") {
             newSelect = {
                 block: 'select',
                 name: 'field',
@@ -96,6 +96,11 @@ DOM.decl('filter', {
                             },
                             {
                                 elem: 'option',
+                                value: 'topics',
+                                content: 'Topics'
+                            },
+                            {
+                                elem: 'option',
                                 value: 'usergroup',
                                 content: 'User Group'
                             }
@@ -120,13 +125,20 @@ DOM.decl('filter', {
             ]
         };
         var currentRows = this.domElem.find(this.buildSelector('filter-item'));
-        if (currentRows.length < 2) { // TODO: change for more rows
+        if (currentRows.length <= 2) {
+            if (currentRows.length == 2) {
+                this.setMod(this.elem('add'), 'invisible', true);
+            }
             $(currentRows[0]).after(BEMHTML.apply(row));
         }
     },
     _removeRow: function(e) {
         var row = e.target.domElem.closest(this.buildSelector('row'));
         row.remove();
+        var currentRows = this.domElem.find(this.buildSelector('filter-item'));
+        if (currentRows.length <= 2) {
+            this.setMod(this.elem('add'), 'invisible', false);
+        }
     }
 
 }, {
