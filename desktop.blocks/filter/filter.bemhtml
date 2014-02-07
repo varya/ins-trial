@@ -2,6 +2,8 @@ block 'filter' {
 
     tag: 'table'
 
+    js: true
+
     content: [{
         elem: 'row',
         content: [
