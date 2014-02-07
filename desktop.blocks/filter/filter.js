@@ -66,8 +66,7 @@ DOM.decl('filter', {
 
         if (newSelect) {
             DOM.update(td, BEMHTML.apply(newSelect));
-            this.setMod(this.elem('add'), 'visible', true);
-
+            this.setMod(this.elem('add'), 'invisible', false);
         }
 
 

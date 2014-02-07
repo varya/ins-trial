@@ -41,7 +41,7 @@ block 'filter' {
         elem: 'row',
         content: {
             elem: 'td',
-            mix: [{ elem: 'add'}],
+            mix: [{ elem: 'add', mods: { 'invisible': true }}],
             attrs: { 'colspan': '3' },
             content: {
                 block: 'button',
