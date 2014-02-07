@@ -6,6 +6,7 @@ block 'filter' {
 
     content: [{
         elem: 'row',
+        mix: [{ elem: 'filter-item' }],
         content: [
             {
                 elem: 'td',

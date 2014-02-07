@@ -58,7 +58,7 @@ DOM.decl('filter', {
                     }
                 ]
             }
-        }
+        };
 
         if (data.value === "") {
             DOM.update(td, "");
@@ -70,7 +70,48 @@ DOM.decl('filter', {
             this.setMod(this.elem('add'), 'invisible', false);
         }
 
+    },
 
+    _addRow: function() {
+        var row = {
+            block: 'filter',
+            elem: 'row',
+            mix: [{ elem: 'filter-item' }],
+            content: [
+                {
+                    elem: 'td',
+                    content: {
+                        block: 'select',
+                        name: 'field',
+                        options: [
+                            {
+                                elem: 'option',
+                                value: '',
+                                content: 'Select'
+                            },
+                            {
+                                elem: 'option',
+                                value: 'comments',
+                                content: 'Comments'
+                            },
+                            {
+                                elem: 'option',
+                                value: 'usergroup',
+                                content: 'User Group'
+                            }
+                        ]
+                    }
+                },
+                {
+                    elem: 'td',
+                    mix: [{ elem: 'val' }]
+                }
+            ]
+        };
+        var currentRows = this.domElem.find(this.buildSelector('filter-item'));
+        if (currentRows.length < 2) { // TODO: change for more rows
+            $(currentRows[0]).after(BEMHTML.apply(row));
+        }
     }
 
 }, {
@@ -79,6 +120,10 @@ DOM.decl('filter', {
 
         this.liveInitOnBlockInsideEvent('selected', 'select', function(e, data){
             this._onSelect(e, data);
+        });
+
+        this.liveInitOnBlockInsideEvent('click', 'button', function(){
+            this._addRow();
         });
 
     }
