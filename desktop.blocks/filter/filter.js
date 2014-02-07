@@ -15,7 +15,7 @@ DOM.decl('filter', {
                 options: [
                     {
                         elem: 'option',
-                        value: '',
+                        value: '0',
                         content: 'bigger than'
                     },
                     {
@@ -43,8 +43,8 @@ DOM.decl('filter', {
                 options: [
                     {
                         elem: 'option',
-                        value: '',
-                        content: '—'
+                        value: 'all',
+                        content: 'All'
                     },
                     {
                         elem: 'option',
@@ -58,6 +58,10 @@ DOM.decl('filter', {
                     }
                 ]
             }
+        }
+
+        if (data.value === "") {
+            DOM.update(td, "");
         }
 
         if (newSelect) {
