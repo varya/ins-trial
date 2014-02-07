@@ -181,6 +181,7 @@
                 }
             ]
         },
+        { elem: 'js', url: '_index.bemhtml.js' },
         { elem: 'js', url: '_index.js' }
     ]
 })
