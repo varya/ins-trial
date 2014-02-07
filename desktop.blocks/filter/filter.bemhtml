@@ -36,6 +36,18 @@ block 'filter' {
                 mix: [{ elem: 'val' }]
             }
         ]
+    },
+    {
+        elem: 'row',
+        content: {
+            elem: 'td',
+            mix: [{ elem: 'add'}],
+            attrs: { 'colspan': '3' },
+            content: {
+                block: 'button',
+                text: 'Add new filter'
+            }
+        }
     }]
 
     elem 'row', tag: 'tr'
