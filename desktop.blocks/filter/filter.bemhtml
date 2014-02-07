@@ -6,6 +6,7 @@ block 'filter' {
 
     content: [{
         elem: 'row',
+        mix: [{ elem: 'filter-item' }],
         content: [
             {
                 elem: 'td',
@@ -36,6 +37,18 @@ block 'filter' {
                 mix: [{ elem: 'val' }]
             }
         ]
+    },
+    {
+        elem: 'row',
+        content: {
+            elem: 'td',
+            mix: [{ elem: 'add', mods: { 'invisible': true }}],
+            attrs: { 'colspan': '3' },
+            content: {
+                block: 'button',
+                text: 'Add new filter'
+            }
+        }
     }]
 
     elem 'row', tag: 'tr'

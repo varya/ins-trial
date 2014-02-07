@@ -16,3 +16,8 @@
 {
     width: 100%;
 }
+
+.filter__add_invisible
+{
+    display: none;
+}
