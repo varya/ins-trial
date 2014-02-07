@@ -27,20 +27,7 @@
                                 elem: 'main',
                                 content: [
                                     {
-                                        block: 'select',
-                                        name: 'select',
-                                        options: [
-                                            {
-                                                elem: 'option',
-                                                value: 'opt1',
-                                                content: 'Option 1'
-                                            },
-                                            {
-                                                elem: 'option',
-                                                value: 'opt2',
-                                                content: 'Option 2'
-                                            }
-                                        ]
+                                        block: 'filter'
                                     },
                                     {
                                         block: 'users-table',

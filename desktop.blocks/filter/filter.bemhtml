@@ -1,0 +1,43 @@
+block 'filter' {
+
+    tag: 'table'
+
+    content: [{
+        elem: 'row',
+        content: [
+            {
+                elem: 'td',
+                content: {
+                    block: 'select',
+                    name: 'field',
+                    options: [
+                        {
+                            elem: 'option',
+                            value: '',
+                            content: 'Select'
+                        },
+                        {
+                            elem: 'option',
+                            value: 'comments',
+                            content: 'Comments'
+                        },
+                        {
+                            elem: 'option',
+                            value: 'topics',
+                            content: 'Topics'
+                        }
+                    ]
+                }
+            },
+            {
+                elem: 'td',
+                mix: [{ elem: 'val' }]
+            }
+        ]
+    }]
+
+    elem 'row', tag: 'tr'
+
+    elem 'td', tag: 'td'
+
+}
