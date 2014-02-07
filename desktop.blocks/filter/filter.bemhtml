@@ -35,6 +35,12 @@ block 'filter' {
             {
                 elem: 'td',
                 mix: [{ elem: 'val' }]
+            },
+            {
+                elem: 'td'
+            },
+            {
+                elem: 'td'
             }
         ]
     },
@@ -43,9 +49,10 @@ block 'filter' {
         content: {
             elem: 'td',
             mix: [{ elem: 'add', mods: { 'invisible': true }}],
-            attrs: { 'colspan': '3' },
+            attrs: { 'colspan': '4' },
             content: {
                 block: 'button',
+                mods: { action: 'add' },
                 text: 'Add new filter'
             }
         }
