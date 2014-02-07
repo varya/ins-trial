@@ -2,6 +2,16 @@ modules.define('i-bem__dom', ['jquery', 'BEMHTML'], function(provide, $, BEMHTML
 
 DOM.decl('filter', {
 
+    onSetMod: {
+        'js' : {
+            'inited' : function() {
+                DOM.blocks.button.on(this.elem('add'), 'click', function() {
+                    this._addRow();
+                }, this);
+            }
+        }
+    },
+
     _onSelect: function(e, data) {
         var select = e.target.domElem,
             row = select.closest(this.buildSelector('row')),
@@ -122,9 +132,7 @@ DOM.decl('filter', {
             this._onSelect(e, data);
         });
 
-        this.liveInitOnBlockInsideEvent('click', 'button', function(){
-            this._addRow();
-        });
+        this.liveInitOnBlockInsideEvent('click', 'button');
 
     }
 
