@@ -15,22 +15,18 @@ block 'filter' {
                     name: 'field',
                     options: [
                         {
-                            elem: 'option',
                             value: '',
                             content: 'Select'
                         },
                         {
-                            elem: 'option',
                             value: 'comments',
                             content: 'Comments'
                         },
                         {
-                            elem: 'option',
                             value: 'topics',
                             content: 'Topics'
                         },
                         {
-                            elem: 'option',
                             value: 'usergroup',
                             content: 'User Group'
                         }

@@ -14,22 +14,18 @@ DOM.decl('filter', {
                 name: 'field',
                 options: [
                     {
-                        elem: 'option',
                         value: '0',
                         content: 'bigger than'
                     },
                     {
-                        elem: 'option',
                         value: '10',
                         content: '10'
                     },
                     {
-                        elem: 'option',
                         value: '20',
                         content: '20'
                     },
                     {
-                        elem: 'option',
                         value: '30',
                         content: '30'
                     }
@@ -42,17 +38,14 @@ DOM.decl('filter', {
                 name: 'val',
                 options: [
                     {
-                        elem: 'option',
                         value: 'all',
                         content: 'All'
                     },
                     {
-                        elem: 'option',
                         value: 'moderators',
                         content: 'Moderators'
                     },
                     {
-                        elem: 'option',
                         value: 'user',
                         content: 'Registered user'
                     }
@@ -85,22 +78,18 @@ DOM.decl('filter', {
                         name: 'field',
                         options: [
                             {
-                                elem: 'option',
                                 value: '',
                                 content: 'Select'
                             },
                             {
-                                elem: 'option',
                                 value: 'comments',
                                 content: 'Comments'
                             },
                             {
-                                elem: 'option',
                                 value: 'topics',
                                 content: 'Topics'
                             },
                             {
-                                elem: 'option',
                                 value: 'usergroup',
                                 content: 'User Group'
                             }
