@@ -53,4 +53,32 @@ block 'select' {
 
     }
 
+    elem 'select' {
+
+        tag: 'select'
+
+        attrs: {
+            name: this.ctx.name
+        }
+
+        content: {
+            var options = [];
+            this.ctx.options.forEach(function(option){
+                option.elem = 'select-option';
+                options.push(option);
+            });
+            return options;
+        }
+
+    }
+
+    elem 'select-option' {
+
+        tag: 'option'
+
+        attrs: {
+            value: this.ctx.value
+        }
+    }
+
 }
