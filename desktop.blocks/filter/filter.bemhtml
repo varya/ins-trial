@@ -58,7 +58,7 @@ block 'filter' {
             content: {
                 block: 'button',
                 mods: { action: 'add' },
-                text: 'Add new filter'
+                text: 'Add row'
             }
         }
     }]
