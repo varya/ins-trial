@@ -18,9 +18,11 @@ To learn about BEM methodology, check out the following links in English:
 ### Code reuse
 The application uses BEM libraries of independent components
   * **bem-core**
-    * [bem-core documentation](http://bem.info/libs/bem-core/1.1.0)
-    * [bem-core repository](https://github.com/bem/bem-core)
- * **bem-components**
+   * [bem-core documentation](http://bem.info/libs/bem-core/1.1.0)
+   * [bem-core repository](https://github.com/bem/bem-core)
+  
+
+  * **bem-components**
    * [bem-components repository](https://github.com/bem/bem-components)
 
 All the interface elements are implemented as independent components. Some of
