@@ -2,14 +2,16 @@
 {
     width: 100%;
     background: #f9f9f9;
-    border: #ccc 1px solid;
+    border: #c5c5c5 1px solid;
     margin-bottom: 2em;
-    padding: 0.5em;
+    padding: 20px;
 }
 
 .filter__td
 {
     width: 200px;
+    padding-bottom: 10px;
+    padding-right: 5px;
 }
 
 .filter__td:last-child

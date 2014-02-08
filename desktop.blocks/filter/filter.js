@@ -116,7 +116,7 @@ DOM.decl('filter', {
                     content: {
                         block: 'button',
                         mods: { action: 'remove' },
-                        text: 'remove'
+                        text: '×'
                     }
                 },
                 {
