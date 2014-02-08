@@ -1,10 +1,120 @@
-# Minimal setup to start a new [BEM](http://bem.info) project
+# Demo project of a static page with BEM
 
-This repository contains the *minimal* configuration-files and folders you will need to create a [BEM](http://bem.info) project from *scratch*.
+http://varya.me/ins-trial/desktop.bundles/index/index.html
+
+## Application idea
+
+### A piece of theory
+The application is implemented using [BEM methodogy](http://bem.info) and some
+BEM code which has already been written and used.
+BEM works with all of the technologies usually used for web interface objects (CSS, templates, JavaScript).
+
+To learn about BEM methodology, check out the following links in English:
+  * [Official web site](http://bem.info)
+  * [Quick start with full BEM stack](http://bem.info/articles/start-with-project-stub/)
+  * [A new method to develop frontend](http://coding.smashingmagazine.com/front-end-methodology-bem-file-system-representation/)
+  @ SmashingMagazine
+
+### Code reuse
+The application uses BEM libraries of independent components
+  * **bem-core**
+    * [bem-core documentation](http://bem.info/libs/bem-core/1.1.0)
+    * [bem-core repository](https://github.com/bem/bem-core)
+ * **bem-components**
+   * [bem-components repository](https://github.com/bem/bem-components)
+
+All the interface elements are implemented as independent components. Some of
+them redefine library components.
+
+ * [project
+ component storage](https://github.com/varya/ins-trial/tree/master/desktop.blocks)
+ * [example of
+ a component redefining](https://github.com/varya/ins-trial/tree/master/desktop.blocks/button)
+ * [expample of full component
+ implementation](https://github.com/varya/ins-trial/tree/master/desktop.blocks/select)
+
+### CSS approach
+CSS for all the components is written according to BEM methodology. Thus, every
+entity can set any place within a page and work independently.<br/>
+Sometimes this approah leads to similar pieces of code which might be saved
+([like
+here](https://github.com/varya/ins-trial/blob/master/desktop.blocks/button/button.css).
+But thanks to [CSSO utility](http://bem.info/tools/optimizers/csso/) all the
+copy-paste pieces are optimized when building in the production mode.
+
+### JavaScript approach
+JavaScript code for all of the blocks is written in terms of BEM. This is possible with
+a helper block
+`i-bem`
+provided by ``bem-core`` block library. The idea can be understood from [Tutorial
+on JavaScript in BEM terms](https://github.com/bem/bem-js-tutorial).
+
+In short, the important ideas are the following:
+ * Each block has a JavaSript ``class``.
+ * Each block representation is an ``instance`` of its class.
+ * A block (class) is described declaratively.
+ * A block (and its elements) can react on setting (or deleting) their modifiers doing something.
+ * Many helpers for event delegation ideas.
+ * Lazy initialization for blocks.
+
+The approach enables to create independent and _reusable_ components. Although
+creating a strickly consistent component takes time. Thus, you can also explore
+other examples of using JavaScript in BEM terms:
+
+ * **independent select block**
+   * [live page
+   example](http://varya.me/scoreboard-experiment/desktop.bundles/index/index.html)
+   * [block
+   code](https://github.com/varya/scoreboard-experiment/tree/master/ya-libs/islands-components/common.blocks/select)
+ * **single page application**
+   * [live
+   example](http://varya.me/sc-challenge/)
+   * [repo &
+   explanations](https://github.com/varya/sc-challenge)
+
+### Tempates
+A special JavaScript-based template engine is used to turn data into HTML.
+
+The basic information is in [xjst repo](https://github.com/veged/xjst) and at the
+[BEMHTML syntax
+documentation](http://bem.info/libs/bem-core/1.0.0/bemhtml/reference/).
+
+Briefly, it is as declarative as XSLT but as fast as JavaScript. Actually BEMHTML code turns into ugly plain JavaScript
+when compiling the project.
+
+It is possible to be run on both client and server sides. In this example a part
+of filter table (one row) is built on server when compiling the page. And
+another part (additional row) is built on client from the JavaScript application
+using the same templates. [The details can be seen from the
+code](https://github.com/varya/ins-trial/blob/master/desktop.blocks/filter/filter.js#L68)
+
+## Advantages
+Speaking about advantages of using BEM for this application I would like to say:
+
+#### Code reuse
+Every technology in BEM has its own sort of inheritance. So, it is posible to reuse code from libraries by tuning it
+for a particular project.
+
+#### Encapsulation
+The application is divided into independent parts (which are the blocks). So, it makes it possible to keep the code in order.
+
+### Event delegation
+All the events are watched using the idea of delegation. DOM event handlers are binded to
+the ``document`` object, and BEM events are delegated from an instance to its class.
+
+### Declarative approach
+Defining `onSetMod` and `onElemSetMod` properties makes it possible to
+describe a block reaction
+at the setting of a modifier to a block or its element. With this it is easy to make the block consistent.
+The advantage is a well-designed application and fewer bugs.
+
+### Live (lazy) initialization
+Special methods are used to ensure that an instance (block) JavaScript object occurs in
+the browser memory only when it is needed. For example, when a user clicks a particular block element.
 
 ---
 
-## Installation Requirements:
+## Installation Requirements (for development)
 
 - [node.js](http://nodejs.org/)
 
@@ -12,7 +122,7 @@ You may also consider [installing bem-tools locally to your environment](http://
 
 ---
 
-## Installation:
+### Installation:
 
 So, how easy is it to get started with BEM?  *Super easy*.
 
@@ -20,8 +130,7 @@ It's as easy as...
     
 1. ›`git clone git://github.com/bem/project-stub.git`
 2. ›`cd project-stub`
-3. ›`npm install`
-4. ›`./node_modules/bem/bin/bem server`
+3. ›`make`
 
 *(hint: execute the above commands in your terminal)*
 
@@ -36,67 +145,6 @@ Navigate to: http://localhost:8080/desktop.bundles/index/index.html
 ---
 
 **That's it, it's that simple. Congratulations, your BEM project is already underway!**
-
----
-
-### Was that too easy?
-
-Here's the replay... that `bem server` command will:
-
-1. Install a **local copy** of all required dependencies from [npm](http://npmjs.org/) into the `./node_modules` directory. (specifically: [bem-tools](http://github.com/bem/bem-tools))
-2. Start a local `bem server` on port `8080`.
-
-#### Note:
-
-What do we mean by "a **local copy** of all required dependencies"?
-
-Well, when you run the `bem make` / `bem server` command for the first time, we install all of the required dependencies ([bem-tools](http://github.com/bem/bem-tools))
-to the `./node_modules` directory within the **local project directory**.  This is *not* the same thing as
-[installing bem-tools locally to your environment](http://bem.info/tools/bem/installation/) - which, if you haven't
-done already, we strongly suggest that you do.  This is by far the easiest, quickest way to use
-[bem-tools](http://github.com/bem/bem-tools) in [a more beautiful way](#an-easier-more-beautiful-way).
-
----
-
-## Usage:
-
-### Start the Server:
-
-    › ./node_modules/bem/bin/bem server
-
-
-This is the ugly way to run the `bem server` command.  If you think it's ugly too and wish for [a better way](#an-easier-more-beautiful-way) keep reading...
-
-### An Easier, More Beautiful Way:
-
-Once you have either (a) [fixed your PATH environment variable](#fix-your-path-environment-variable), or (b) 
-[properly installed bem-tools to your local environment](http://bem.info/tools/bem/installation/).
-You may now, more elegantly, start your `bem server` by running:
-
-    › bem server
-
----
-
-### Stopping the Server:
-
-Stopping the server is also easy:
-
-    [ctrl] + [c]
-
-Pressing `[ctrl] + [c]` while the terminal is your active window will stop the server.
-
----
-
-### Fix your PATH environment variable:
-
-For a more permanent way to "easily" use the *local-to-this-project's* installation of
-[bem-tools](http://github.com/bem/bem-tools) all you must do is ensure that the **path** to the `bem` executable
-(`./node_modules/.bin`) is included in your `PATH` environment variable.
-
-    > export PATH=./node_modules/.bin:$PATH
-
-Optionally you may also add `export PATH=PATH_TO_PROJECT_DIRECTORY/node_modules/.bin:$PATH` to your `.profile`
-(obviously replacing `PATH_TO_PROJECT_DIRECTORY` with the actual path to your project)
 
 ---
 
