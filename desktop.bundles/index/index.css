@@ -1,0 +1,12 @@
+@import url(../../desktop.blocks/page/page.css);
+@import url(blocks/page/page.css);
+@import url(../../desktop.blocks/layout/layout.css);
+@import url(../../desktop.blocks/filter/filter.css);
+@import url(../../desktop.blocks/select/select.css);
+@import url(../../libs/bem-components/design/common.blocks/button/button.css);
+@import url(../../desktop.blocks/button/button.css);
+@import url(../../libs/bem-components/design/common.blocks/button/_disabled/button_disabled.css);
+@import url(../../libs/bem-components/design/common.blocks/button/_pressed/button_pressed.css);
+@import url(../../desktop.blocks/users-table/users-table.css);
+@import url(../../desktop.blocks/upic/upic.css);
+@import url(../../desktop.blocks/window-icon/window-icon.css);
