@@ -7,6 +7,11 @@
     cursor: pointer;
 }
 
+.select__select
+{
+    display: none;
+}
+
 .select__list
 {
     position: absolute;

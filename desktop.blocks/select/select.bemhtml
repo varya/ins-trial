@@ -9,9 +9,25 @@ block 'select' {
         },
         {
             elem: 'list',
-            content: this.ctx.options
+            options: this.ctx.options
+        },
+        {
+            elem: 'select',
+            name: this.ctx.name,
+            options: this.ctx.options
         }
     ]
+
+    elem 'list' {
+        content: {
+            var options = [];
+            this.ctx.options.forEach(function(option){
+                option.elem = 'option';
+                options.push(option);
+            });
+            return options;
+        }
+    }
 
     elem 'button' {
 
@@ -35,6 +51,34 @@ block 'select' {
             'data-value': this.ctx.value
         }
 
+    }
+
+    elem 'select' {
+
+        tag: 'select'
+
+        attrs: {
+            name: this.ctx.name
+        }
+
+        content: {
+            var options = [];
+            this.ctx.options.forEach(function(option){
+                option.elem = 'select-option';
+                options.push(option);
+            });
+            return options;
+        }
+
+    }
+
+    elem 'select-option' {
+
+        tag: 'option'
+
+        attrs: {
+            value: this.ctx.value
+        }
     }
 
 }
